@@ -587,10 +587,14 @@ a {
 
 .modal-footer h3 {
   margin: 0;
+  padding: 0;
 }
 
 .modal-header {
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 5px solid red;
 }
 
 .modal-body {
@@ -603,15 +607,18 @@ a {
 }
 
 .close {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  z-index: 11;
+  top: -10%;
+  right: 0;
+  font-size: 70px;
   color: #fff;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: var(--hl-color);
   text-decoration: none;
   cursor: pointer;
 }
