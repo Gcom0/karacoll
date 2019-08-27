@@ -597,6 +597,10 @@ a {
   border: 5px solid red;
 }
 
+.modal-header {
+  padding: 15px;
+}
+
 .modal-body {
   padding: 10px 20px;
 }
@@ -613,12 +617,16 @@ a {
   top: -10%;
   right: 0;
   font-size: 70px;
+  color: #ccc;
+  float: right;
+  font-size: 30px;
   color: #fff;
 }
 
 .close:hover,
 .close:focus {
   color: var(--hl-color);
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
