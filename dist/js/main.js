@@ -1,34 +1,25 @@
 'use strict'
 
-// Get DOM Elements
-const modal = document.querySelector('#my-modal');
-const modalBtn = document.querySelector('#modal-btn');
-const closeBtn = document.querySelector('.close');
+// Grab DOM Elements
+const modalTriggers = document.querySelectorAll('.modal-img');
 
-// Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
+const modal = document.querySelectorAll('.modal');
 
-// Open
-function openModal() {
-  modal.style.display = 'block';
-}
+modalTriggers.forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const { popupTrigger } = trigger.dataset;
+    const popupModal = document.querySelector(`[data-popup-modal="${popupTrigger}"]`);
 
-// Close
-function closeModal() {
-  modal.style.display = 'none';
-}
+    popupModal.style.display = 'block';
 
-// Close If Outside Click
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-}
+    popupModal.querySelector('.close').addEventListener('click', () => {
+      popupModal.style.display = 'none';
+    });
+  });
+});
 
-// Open Nav
 
+// Sidebar Nav
 (function() {
 
   let hamburger = {
