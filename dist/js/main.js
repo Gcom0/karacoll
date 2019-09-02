@@ -3,7 +3,7 @@
 // Grab DOM Elements
 const modalTriggers = document.querySelectorAll('.modal-img');
 
-const modal = document.querySelectorAll('.modal');
+// const modal = document.querySelectorAll('.modal');
 
 modalTriggers.forEach(trigger => {
   trigger.addEventListener('click', () => {
@@ -37,4 +37,3 @@ modalTriggers.forEach(trigger => {
   hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
 
 }());
->>>>>>> 69ea66fb4f787220157d6b626b7a06953aba2b70
